@@ -4,11 +4,6 @@ plugins {
     id 'java'
 }
 
-checkstyle {
-    project.ext.checkstyleVersion = '8.20'
-    configFile = file('config/checkstyle/checkstyle.xml')
-}
-
 group = 'com.bdshopping'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '17'
