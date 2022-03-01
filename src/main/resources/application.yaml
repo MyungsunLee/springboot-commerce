@@ -1,18 +1,18 @@
 spring:
   data:
     mongodb:
-      host: localhost
-      port: 27017
+      host: ${MONGODB_HOST:localhost}
+      port: ${MONGODB_PORT:27017}
   autoconfigure:
     exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
 swagger:
   app-info:
-    name: springboot-bdshopping
-    description: none
-    version: 1.0.0
-    license: Apache 2.0
-    license-url: http://www.apache.org/licenses/LICENSE-2.0.html
+    name: ${SWAGGER_APP_INFO_NAME:springboot-bdshopping}
+    description: ${SWAGGER_APP_INFO_DESCRIPTION:none}
+    version: ${SWAGGER_APP_INFO_VERSION:1.0.0}
+    license: ${SWAGGER_APP_INFO_LICENSE:Apache 2.0}
+    license-url: ${SWAGGER_APP_INFO_LICENSE_URL:http://www.apache.org/licenses/LICENSE-2.0.html}
   contact:
-    name: MyungsunLee
-    url: https://github.com/MyungsunLee/springboot-commerce
-    email: naru10117@gmail.com
+    name: ${SWAGGER_CONTACT_NAME:MyungsunLee}
+    url: ${SWAGGER_CONTACT_URL:https://github.com/MyungsunLee/springboot-commerce}
+    email: ${SWAGGER_CONTACT_EMAIL:naru10117@gmail.com}
