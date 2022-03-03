@@ -27,7 +27,7 @@ public class RequestLoggingAspect {
                 .collect(Collectors.joining(", "));
     }
 
-    @Pointcut("within(com.bdshopping.springbootbdshopping.controller..*)") // 3
+    @Pointcut("within(com.bdshopping.springbootbdshopping..*Controller)") // 3
     public void onRequest() {}
 
     @Around("com.bdshopping.springbootbdshopping.aop.RequestLoggingAspect.onRequest()") // 4
